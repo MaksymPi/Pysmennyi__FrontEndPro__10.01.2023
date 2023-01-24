@@ -36,18 +36,18 @@
 
 // Дане ціле число. З'ясувати, чи є воно простим (простим називається число, більше 1, які не мають інших дільників крім 1 і себе).
 
-// let flag = true;
-// let num = 12;
-// for (let i = 2; i * i<= num; i++) {
-// 	if (num % i ===0) {
-// 	flag == false;
-// 	console.log('число є не простим');
-// 	break;
-// }else if(flag = true){
-// 	console.log('число є простим');
-// 	break;
-// }
-// }
+
+let num = 11;
+let flag = 'Просте';
+
+for (let i = 2; i <= num; i++) {
+  if (num % i === 0 && num !== i && num !== 1) {
+    flag = 'Не просте';
+}}
+console.log(flag);
+
+
+
 
 
 
