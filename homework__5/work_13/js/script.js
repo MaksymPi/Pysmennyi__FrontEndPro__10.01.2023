@@ -1,4 +1,4 @@
-// Знайти суму та кількість позитивних елементів.
+// 1.Знайти суму та кількість позитивних елементів.
 
 const NumbersArray = [16,-37,54,-4,72,-56,47,4,-16,25,-37,46,4,-51,27,-63,4,-54,76,-4,12,-35,4,47];
 const positiveArr = NumbersArray.filter(function(number) {
@@ -11,13 +11,13 @@ const result = positiveArr.reduce(function(sum, current) {
 console.log(result);
 console.log(positiveArr.length);
 
-// Знайти мінімальний елемент масиву та його порядковий номер.
+// 2.Знайти мінімальний елемент масиву та його порядковий номер.
 
 const minimalElementArray = Math.min(...NumbersArray);
 console.log(minimalElementArray);
 console.log(NumbersArray.indexOf(minimalElementArray) + 1);
 
-// Знайти максимальний елемент масиву та його порядковий номер.
+// 3.Знайти максимальний елемент масиву та його порядковий номер.
 
 const maxElementArray = Math.max(...NumbersArray);
 console.log(maxElementArray);
