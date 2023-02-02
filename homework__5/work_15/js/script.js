@@ -68,5 +68,5 @@
     }
    });
   console.log(arrusersPhone);
-  console.log(`Cумa всіх балансів користувачів: $${sumUsersBalance}`);
+  console.log(`Cумa всіх балансів користувачів: $${sumUsersBalance.toFixed(0)}`);
   
