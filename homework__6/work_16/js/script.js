@@ -6,4 +6,4 @@ const array = [1, 2, 3, 4, 5, 6, 7];
 function removeElement(arr, item) {
   console.log(arr.filter(el => el !== item));
 }
-removeElement(array, 6);
+removeElement(array, 5);
