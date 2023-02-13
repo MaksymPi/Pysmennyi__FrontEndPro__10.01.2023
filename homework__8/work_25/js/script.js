@@ -3,27 +3,24 @@
 // У підсумкового інстансу повинні бути функції машини типу їхати і гальмувати з прототипу так і функції пов'язані з маркою 
 // машини типу вертикального відкриття дверей Lamborghini.
 
-function Car(carName) {
-  this.carName = carName;
-
-  this.goForward = function () {
-    console.log(`Go forward ${this.carName}`);
-  }
-
-  this.break = function () {
-    console.log(`Break ${this.carName}`);
+const сar = {
+  goForward () {
+    console.log(`Go forward ${this.name}`);
+  },
+  break () {
+    console.log(`Break ${this.name}`);
   }
 }
 
-function CarLamborghini() {
-  Car.call(this, 'Lamborghini');
-
-  this.openingDoors = function () {
-    console.log('vertical door opening');
-  }
+function Brand(name) {
+  this.name = name;
 }
+Brand.prototype = сar;
 
-const Lamborghini = new CarLamborghini();
-const Skoda = new Car('Skoda');
-console.log(Lamborghini);
+const Lamborghini = new Brand('Lamborghini')
+const Skoda = new Brand("Skoda");
+
+Lamborghini.openingDoors = "vertical door opening";
+
 console.log(Skoda);
+console.log(Lamborghini);
