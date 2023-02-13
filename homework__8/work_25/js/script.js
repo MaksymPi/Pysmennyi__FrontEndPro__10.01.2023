@@ -15,7 +15,7 @@ function Car(carName) {
   }
 }
 
-function Lamborghini() {
+function CarLamborghini() {
   Car.call(this, 'Lamborghini');
 
   this.openingDoors = function () {
@@ -23,5 +23,7 @@ function Lamborghini() {
   }
 }
 
-const DoorsLamborghini = new Lamborghini();
-const newCar = new Car('WV');
+const Lamborghini = new CarLamborghini();
+const Skoda = new Car('Skoda');
+console.log(Lamborghini);
+console.log(Skoda);
