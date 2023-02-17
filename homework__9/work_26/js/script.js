@@ -27,15 +27,15 @@ setHi('Max', '5 seconds')
 
 // Создать функцию которая будет или сериализировать или десериализировать объект в зависимости от того в какой форме он был передан
 
-function asd (text) {
+function checkJson (text) {
   if (typeof text === 'object') {
     console.log(JSON.stringify(text));
   } else if (typeof text === 'string') {
     console.log(JSON.parse(text));
   }
 }
-asd('{"name":"Bob","age":18}');
-asd({
+checkJson('{"name":"Bob","age":18}');
+checkJson({
   name: 'Bob',
   age: 18,
 });
