@@ -1,11 +1,11 @@
 // Создать функцию которая будет принимать миллисекунды и вернет true или false в зависимости от того сегодня ли то число которое было передано
 
-function timeSeconds (seconds) {
-  const passedNumber = new Date(seconds);
+function timeSeconds (unixTime) {
+  const passedNumber = new Date(unixTime);
   const todayNumber = new Date();
-  passedNumber.getDate() === todayNumber.getDate() ? console.log(true) : console.log(false);
+  return passedNumber.getDate() === todayNumber.getDate() ? true : false;
 }
-timeSeconds(1677096770000)
+console.log(timeSeconds(1677096770000)); 
 
 // Создать функцию которая вернет дату и время в формате 13.10.2022 13:13 принимая миллисекунды
 
