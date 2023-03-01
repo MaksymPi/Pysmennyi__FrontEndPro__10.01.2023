@@ -1,6 +1,12 @@
 // 1) Избавится от неуникальных элементов массива
 
 const numbersArray = [1,1,2,3,4,5,5,5,6];
+let set = new Set(numbersArray);
+console.log(set);
+
+for (let value of set) 
+console.log(value);;
+
 function filter(arr) {
   return Array.from(new Set(numbersArray));
 }
@@ -36,5 +42,5 @@ const err = 'Не коректне значення!';
 console.log(transform(err));
 const obj = { name: 'Sid', gender: 'man' };
 console.log(transform(obj));
-const map = new Map([['name', 'Sid'], ['gender', 'man']]);
+const map = new Map([['name', 'Sid'], ['gender', 'value2']]);
 console.log(transform(map));
