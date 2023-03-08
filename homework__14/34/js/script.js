@@ -20,10 +20,10 @@ const brushTeeth = () => {
   });
 };
 
-const Breakfast = () => {
+const breakfast = () => {
   return new Promise((resolve, reject) => {
-    const Breakfast = true;
-    if (Breakfast) {
+    const breakfast = true;
+    if (breakfast) {
       resolve('6:00 Приготував та з\'їв сніданок');
     } else {
       reject('Я не приготував сніданок');
@@ -41,10 +41,10 @@ const goToWork = () => {
     }
   });
 };  
-const Dinner = () => {
+const dinner = () => {
   return new Promise((resolve, reject) => {
-    const Dinner  = true;
-    if (Dinner) {
+    const dinner  = true;
+    if (dinner) {
       resolve('14:00 Пішов на обід');
     } else {
       reject('Я не пішов на обід');
@@ -59,7 +59,7 @@ wakeUp()
   })
   .then((message) => {
     console.log(message);
-    return Breakfast();
+    return breakfast();
   })
   .then((message) => {
       console.log(message);
@@ -67,7 +67,7 @@ wakeUp()
     })
   .then((message) => {
       console.log(message);
-      return Dinner();
+      return dinner();
     })
   .then((message) => {
     console.log(message);
