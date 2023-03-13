@@ -5,49 +5,53 @@ function* randomGeneratorNumbers(start, end){
     yield Math.floor(Math.random() * (end - start)) + start;
   }
 }
+
 function randomNumber(firstNumber, lastNumber){
   const numbers = randomGeneratorNumbers(firstNumber, lastNumber);
-  for (const number of numbers) {
-    console.log(number);
-  }
+  const numbersArray = Array.from(numbers);
+  numbersArray.forEach(number => console.log(number));
 }
 randomNumber(20, 100)
 
 // 2) Создать свой распорядок дня с помощью async await ( тоесть мы должны "подождать" выполнение асинхронной функции brushTeeth перед тем как приступать к выполнению следующей асинхронной функции)
 
-async function awoke(){
-  await new Promise(resolve => setTimeout(resolve, 1000))
+async function awoke() {
+  await new Promise(resolve => setTimeout(resolve, 1000));
   console.log('Прокинувся');
 }
 
-async function brushTeeth(){
+async function brushTeeth() {
   await awoke();
-  await new Promise(resolve => setTimeout(resolve, 2000))
+  await new Promise(resolve => setTimeout(resolve, 2000));
   console.log('Почистив зуби');
 }
 
-async function breakfast(){
+async function breakfast() {
   await brushTeeth();
-  await new Promise(resolve => setTimeout(resolve, 3000))
+  await new Promise(resolve => setTimeout(resolve, 3000));
   console.log('Поснідав');
 }
 
-async function goWork(){
+async function goWork() {
   await breakfast();
-  await new Promise(resolve => setTimeout(resolve, 4000))
+  await new Promise(resolve => setTimeout(resolve, 4000));
   console.log('Поїхав на роботу');
 }
 
-async function dinner(){
+async function dinner() {
   await goWork();
-  await new Promise(resolve => setTimeout(resolve, 5000))
-  console.log('Перерва на обід');
+  await new Promise(resolve => setTimeout(resolve, 5000));
+  console.log('Обід');
 }
 
-async function endWork(){
+async function endWork() {
   await dinner();
-  await new Promise(resolve => setTimeout(resolve, 6000))
+  await new Promise(resolve => setTimeout(resolve, 6000));
   console.log('Кінець робочого дня');
 }
 
-endWork()
+async function dailyRoutine() {
+  await endWork();
+}
+
+dailyRoutine();
