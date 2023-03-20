@@ -1,0 +1,8 @@
+.block{
+    display: inline-block;
+    visibility: hidden;
+}
+.show{
+    display: inline-block;
+    overflow: visible;
+}
