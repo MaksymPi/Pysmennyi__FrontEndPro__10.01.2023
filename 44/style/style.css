@@ -1,0 +1,80 @@
+ul,li{
+  list-style: none;
+}
+li{
+  cursor: pointer;
+}
+
+
+h2{
+  color: #18a9d8;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.category-item-przystawki,
+.category-item-zupy,
+.category-item-napoje
+{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+    margin: 20px;
+}
+.categories-product-przystawki,
+.categories-product-zupy,
+.categories-product-napoje
+{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    align-items: center;
+    padding: 8px 0;
+    margin: 10px 20px 0px 100px;
+    cursor: pointer;
+}
+.product-menu-przystawki,
+.product-menu-zupy,
+.product-menu-napoje
+{
+  margin: 20px 50px 100px 150px;
+  display: flex;
+  flex-direction: column;
+}
+.menu-item-title{
+  font-size: 20px;
+  font-weight: 800;
+}
+.menu-item-price{
+  margin-top: 10px;
+  color: #18a9d8;
+  font-weight: 700;
+  font-size: 16px;
+}
+.btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 200px;
+  height: 50px;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+}
+
+.hidden{
+  display: none;
+}
