@@ -1,0 +1,3 @@
+echo .DS_Store >> .gitignore
+.DS_Store
+homework__10/.DS_Store
