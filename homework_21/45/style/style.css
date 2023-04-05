@@ -1,0 +1,164 @@
+ul,li{
+  list-style: none;
+}
+li{
+  cursor: pointer;
+}
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+
+* {margin: 0; padding: 0;}
+html {
+	height: 100%;
+
+	background: 
+		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+body {
+	font-family: montserrat, arial, verdana;
+}
+h2{
+  color: #18a9d8;
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.category-item-przystawki,
+.category-item-zupy,
+.category-item-napoje
+{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    align-items: center;
+    padding: 8px 0;
+    cursor: pointer;
+    margin: 20px;
+}
+.categories-product-przystawki,
+.categories-product-zupy,
+.categories-product-napoje
+{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    align-items: center;
+    padding: 8px 0;
+    margin: 10px 20px 0px 100px;
+    cursor: pointer;
+}
+.product-menu-przystawki,
+.product-menu-zupy,
+.product-menu-napoje
+{
+  margin: 20px 50px 100px 150px;
+  display: flex;
+  flex-direction: column;
+}
+.menu-item-title{
+  font-size: 20px;
+  font-weight: 800;
+}
+.menu-item-price{
+  margin-top: 10px;
+  color: #18a9d8;
+  font-weight: 700;
+  font-size: 16px;
+}
+.btn,.btn-form {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 200px;
+  height: 50px;
+}
+
+.btn:hover {
+  background-color: #3e8e41;
+}
+
+.hidden{
+  display: none;
+}
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 20px;
+}
+.form-container{
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 200px;
+}
+.orderForm{
+  width: 500px;
+  text-align: left;
+  display: none;
+  flex-direction: column;
+}
+.orderForm fieldset {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+	padding: 20px 30px;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 10%;
+}
+.orderForm input, .orderForm textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;
+}
+
+.menu{
+  padding: 0;
+  margin: 0;
+  width: 300px;
+  height: 200px;
+}
+
+.table {
+  width: 400px;
+  margin: 70px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.td {
+  display: flex;
+  border-radius: 20px;
+  background-color: #4CAF50;
+  box-shadow: rgb(255, 255, 255) 2px 2px 4px;
+  padding: 10px 50px 10px 10px;
+  margin: 13px 0;
+}
+.footer-txt {
+  display: none;
+}
