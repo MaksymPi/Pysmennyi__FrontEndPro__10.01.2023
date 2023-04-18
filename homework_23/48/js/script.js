@@ -21,29 +21,23 @@ const renderPosts = (posts) => {
   });
 };
 
-const fetchPost = (idPost) => {
-  return new Promise((resolve, reject) => {
+const fetchPost = async (idPost) => {
+  try {
     const apiUrl = `https://jsonplaceholder.typicode.com/posts/${idPost}`;
-    fetch(apiUrl)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("Network response was not ok");
-        }
-      })
-      .then((post) => resolve(post))
-      .catch((error) => reject(error));
-  });
-};
+    const response = await fetch(apiUrl)
+    const posts = await response.json();
+    return posts;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 btnSearch.addEventListener("click", () => {
   const idPost = searchInput.value;
   if (idPost >= 1 && idPost <= 100) {
     fetchPost(idPost)
-      .then((post) => [post])
       .then((posts) => {
-        renderPosts(posts);
+        renderPosts([posts]);
       })
       .catch((error) => {
         console.log(error);
@@ -53,6 +47,9 @@ btnSearch.addEventListener("click", () => {
   }
   commentsList.innerHTML = ''
 });
+
+
+
 
 //-------------------Comments
 
@@ -68,21 +65,17 @@ const renderComments = (comments) => {
   });
 };
 
-const fetchComments= (idComments) => {
-  return new Promise((resolve, reject) => {
+
+const fetchComments = async (idComments) => {
+  try {
     const apiUrl = `https://jsonplaceholder.typicode.com/comments/${idComments}`;
-    fetch(apiUrl)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error("Network response was not ok");
-        }
-      })
-      .then((comment) => resolve(comment))
-      .catch((error) => reject(error));
-  });
-};
+    const response = await fetch(apiUrl)
+    const comment = await response.json();
+    return comment;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 btnComments.addEventListener("click", () => {
   const idComments = searchInput.value;
@@ -96,3 +89,6 @@ btnComments.addEventListener("click", () => {
       });
 
 });
+
+
+
