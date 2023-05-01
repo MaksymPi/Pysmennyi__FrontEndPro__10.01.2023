@@ -1,0 +1,25 @@
+.Header{
+    padding-top: 20px;
+}
+.header__menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.header__menu__logo{
+    padding-left: 5px;
+    flex: 0 0 100px;
+}
+
+.header__menu__logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.header__menu__tittle{
+    text-align: center;
+    font-size: 24px;
+    flex: 1 1 auto;
+}

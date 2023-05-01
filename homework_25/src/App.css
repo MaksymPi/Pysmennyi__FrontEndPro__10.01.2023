@@ -1,0 +1,20 @@
+a{
+  text-decoration: none;
+  color: aliceblue;
+}
+body{
+  height: 100%;
+}
+.App {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 10px;
+  margin: 0 auto;
+  background: url(https://files.virgool.io/upload/users/24829/posts/m0a581jdk8zj/30ovzh9b1xr0.jpeg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  color: aliceblue;
+}
