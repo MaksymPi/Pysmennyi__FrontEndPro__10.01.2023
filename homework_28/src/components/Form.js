@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Form.css'
 
 
 export default class Form extends Component {
@@ -29,11 +30,14 @@ export default class Form extends Component {
     const { Firstname, Lastname, phone } = this.state;
     return (
       <>
-        <button onClick={() => this.setState({ showForm: true })}>
-          Показать форму
+        <button className="btnShowForm" onClick={() => this.setState({ showForm: true })}>
+          Show Form
         </button>
         {this.state.showForm && (
-          <form onSubmit={this.handleSubmit}>
+          <div className="card">
+            <h2>New contact</h2>
+          <form className="form" onSubmit={this.handleSubmit}>
+            <label className="input">
             <input
               type="text"
               placeholder="Firstname"
@@ -56,11 +60,13 @@ export default class Form extends Component {
               value={phone}
               onChange={(event) => this.setState({ phone: event.target.value })}
             />
-            <button type="submit">Add Contact</button>
-            <button onClick={() => this.setState({ showForm: false })}>
+            </label>
+            <button className="btnSubmit" type="submit">Add Contact</button>
+            <button className="btnCancel" onClick={() => this.setState({ showForm: false })}>
               Cancel
             </button>
           </form>
+          </div>
         )}
       </>
     );

@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import axios from "axios";
 import Contacts from "./Contacts";
-import Form from './Form';
+import Form from "./Form";
+import './ContactForm.css'
 
 export default class ContactForm extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ export default class ContactForm extends Component {
   }
 
   handleDelete = (userId) => {
-    const filteredUsers = this.state.users.filter(user => user.id !== userId);
+    const filteredUsers = this.state.users.filter((user) => user.id !== userId);
 
     this.setState({ users: filteredUsers });
   };
@@ -32,15 +33,16 @@ export default class ContactForm extends Component {
     this.setState({ users: [...this.state.users, newUser] });
   };
 
-
   render() {
     return (
       <div>
-       <h1>ContactForm</h1> 
+        <div className="h3">
+          <h3>Contact</h3>
+        </div>
         <Contacts
-            users={this.state.users}
-            isLoading={this.state.isLoading}
-            handleDelete={this.handleDelete}
+          users={this.state.users}
+          isLoading={this.state.isLoading}
+          handleDelete={this.handleDelete}
         />
         <Form addUser={this.addUser} />
       </div>

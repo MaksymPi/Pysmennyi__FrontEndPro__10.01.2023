@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './Contacts.css'
 
 export default class Contacts extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export default class Contacts extends Component {
       <div>Loading...</div>
     ) : (
       <>
-        <table>
+        <table className="table">
           <thead>
             <tr>
               <th>Firstname</th>
@@ -29,10 +30,10 @@ export default class Contacts extends Component {
                   <td>{lastName}</td>
                   <td>{user.phone}</td>
                   <td>
-                    <button
+                    <button className="buttonDel"
                       onClick={() => this.props.handleDelete(user.id)}
                     >
-                      Del
+                      Delete
                     </button>
                   </td>
                 </tr>
