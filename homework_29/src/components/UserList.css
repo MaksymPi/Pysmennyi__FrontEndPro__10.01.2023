@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(241, 233, 222);
+}
+
+.userContainer {
+    width: 300px;
+    background-color: rgb(216, 237, 237);
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.btnAlbum,
+.btnPhoto {
+    width: 100px;
+    background-color: rgb(86, 213, 147);
+    border-radius: 20px;
+}
+.albumList{
+    width: 260px;
+    border-radius: 20px;
+    padding-bottom: 100px;
+}
+.album{
+    border: 1px solid red;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
