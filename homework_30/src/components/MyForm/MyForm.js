@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import MyInputForm from "./MyInputForm";
-import MyTableForm from "./MyTableForm";
+import MyInputForm from "../MyInputForm/MyInputForm";
+import MyTableForm from "../MyTableForm/MyTableForm";
+
 
 export default function MyForm() {
   const [list, setList] = useState([]);

@@ -1,4 +1,5 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import './MyTableForm.css'
 
 export default function MyTableForm({ data }) {
@@ -10,7 +11,7 @@ export default function MyTableForm({ data }) {
       );
     } else {
       return data.map((d, i) => (
-        <tr key={i + 1}>
+        <tr key={uuidv4()}>
           <td>{i}</td>
           <td>{d.name}</td>
           <td>{d.email}</td>
